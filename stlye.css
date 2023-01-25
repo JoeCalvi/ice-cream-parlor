@@ -1,4 +1,28 @@
-body{
-    background-color: palegoldenrod;
-    color: aqua;
+header{
+    background-color: #d5eaff;
+    color: #c44956;
+}
+
+main{
+    background-color: #f1dab2;
+    color: #c44956;
+    min-height: calc(100vh - 203px);
+}
+
+footer{
+    background-color: #d5eaff;
+    color: #c44956;
+}
+
+.card{
+    width: 20rem;
+}
+
+.scoops-borders{
+    border: 2px solid #d5eaff;
+    border-radius: 20%;
+}
+
+.checkout-text{
+    transform: translateY(.4em);
 }

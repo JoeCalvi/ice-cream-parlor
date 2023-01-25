@@ -8,7 +8,7 @@ const iceCream = [{
     price: 1
 }, {
     name: 'Strawberry',
-    image: 'https://www.realfoodwithjessica.com/wp-content/uploads/2017/07/paleostrawberryicecream2.jpg',
+    image: 'https://images.unsplash.com/photo-1584448275442-37f6357a499e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
     price: 2
 }]
 
@@ -32,4 +32,3 @@ const containers = [{
     price: 4
 }]
 
-console.log(iceCream);
