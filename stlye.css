@@ -26,3 +26,19 @@ footer{
 .checkout-text{
     transform: translateY(.4em);
 }
+
+.left-side-offset{
+    transform: translateX(1.6em);
+}
+
+.right-side-offset{
+    transform: translateX(-2em);
+}
+
+.middle-left-offset{
+    transform: translateX(3em);
+}
+
+.middle-right-offset{
+    transform: translateX(-3.2em);
+}
