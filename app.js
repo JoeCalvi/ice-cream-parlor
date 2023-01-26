@@ -115,8 +115,10 @@ function checkout() {
 
 function removeItemFromCart() {
 
-    
-    
+cart.splice(-1, 1)
+
+    drawCart()
+
 }
 
 function calculateCartTotal() {
