@@ -32,3 +32,33 @@ const containers = [{
     price: 4
 }]
 
+
+
+function drawStore(){
+
+}
+
+function drawCart(){
+
+}
+
+function addItemToCart(){
+
+}
+
+function removeItemFromCart(){
+
+}
+
+function adjustQuantity(){
+
+}
+
+function calculateCartTotal(){
+
+}
+
+function checkout(){
+    
+}
+
