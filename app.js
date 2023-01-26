@@ -43,32 +43,28 @@ function drawStore() {
 function drawCart() {
 
     let cartOrderElem = document.getElementById('cart-order')
-    let cartTotalElem = document.getElementById('cart-total')
     let template = ''
 
     cart.forEach(item => {
         template += `
-        
+        <span class="checkout-text">
+                        <p id="cart-order">${cart.name}</p>
+                    </span>
         `
     })
 
-    let total = calculateCartTotal()
-
-    cartOrderElem.innerText = template
-    cartTotalElem.innerText = total.toFixed(2)
+    cartOrderElem.innerHTML = template
 
 }
 
 function addContainerToCart(name) {
 
     let chosenContainer = containers.find(container => container.name == name)
-    // console.log(chosenContainer)
     cart.push({
-        container: chosenContainer.name,
+        name: chosenContainer.name,
+        price: chosenContainer.price
     })
-
     console.log(cart)
-
     drawCart()
 
 }
@@ -78,7 +74,8 @@ function addFlavorToCart(name) {
     let chosenFlavor = iceCream.find(flavor => flavor.name == name)
     // console.log(chosenFlavor)
     cart.push({
-        flavor: chosenFlavor.name
+        name: chosenFlavor.name,
+        price: chosenFlavor.price
     })
 
     console.log(cart)
@@ -92,7 +89,8 @@ function addToppingToCart(name) {
     let chosenTopping = toppings.find(topping => topping.name == name)
     // // console.log(chosenTopping)
     cart.push({
-        container: chosenTopping.name,
+        name: chosenTopping.name,
+        price: chosenTopping.price
     })
 
     console.log(cart)
@@ -111,15 +109,11 @@ function adjustQuantity() {
 
 function calculateCartTotal() {
 
-    let total = 0
-    cart.forEach(item => {
-        total += item.price * item.quantity
-    })
-
-    return total
 }
 
 function checkout() {
-
+    cart = []
+    drawCart()
+    console.log(cart)
 }
 
