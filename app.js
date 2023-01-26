@@ -115,6 +115,8 @@ function checkout() {
 
 function removeItemFromCart() {
 
+    
+    
 }
 
 function calculateCartTotal() {

@@ -42,3 +42,7 @@ footer{
 .middle-right-offset{
     transform: translateX(-3.2em);
 }
+
+img:hover{
+    cursor: grab;
+}
