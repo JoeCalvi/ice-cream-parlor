@@ -36,24 +36,29 @@ let cart = []
 
 
 
-function drawStore() {
-
-}
+// function drawStore() {
+    // do i actually need to do this in this scenario?
+// }
 
 function drawCart() {
 
     let cartOrderElem = document.getElementById('cart-order')
+    let cartTotalElem = document.getElementById('cart-total')
     let template = ''
 
-    cart.forEach(item => {
+    for(let i = 0; i < cart.length; i++) {
+        const product = cart[i];
         template += `
         <span class="checkout-text">
-                        <p id="cart-order">${cart.name}</p>
+                        <p id="cart-order">${product.name}</p>
                     </span>
         `
-    })
+    }
+
+    let total = calculateCartTotal()
 
     cartOrderElem.innerHTML = template
+    cartTotalElem.innerText = total.toFixed(2)
 
 }
 
@@ -62,7 +67,8 @@ function addContainerToCart(name) {
     let chosenContainer = containers.find(container => container.name == name)
     cart.push({
         name: chosenContainer.name,
-        price: chosenContainer.price
+        price: chosenContainer.price,
+        quantity: 1
     })
     console.log(cart)
     drawCart()
@@ -72,10 +78,11 @@ function addContainerToCart(name) {
 function addFlavorToCart(name) {
 
     let chosenFlavor = iceCream.find(flavor => flavor.name == name)
-    // console.log(chosenFlavor)
+
     cart.push({
         name: chosenFlavor.name,
-        price: chosenFlavor.price
+        price: chosenFlavor.price,
+        quantity: 1
     })
 
     console.log(cart)
@@ -90,7 +97,8 @@ function addToppingToCart(name) {
     // // console.log(chosenTopping)
     cart.push({
         name: chosenTopping.name,
-        price: chosenTopping.price
+        price: chosenTopping.price,
+        quantity: 1
     })
 
     console.log(cart)
@@ -99,21 +107,25 @@ function addToppingToCart(name) {
 
 }
 
-function removeItemFromCart() {
-
-}
-
-function adjustQuantity() {
-
-}
-
-function calculateCartTotal() {
-
-}
-
 function checkout() {
     cart = []
     drawCart()
     console.log(cart)
 }
+
+function removeItemFromCart() {
+
+}
+
+function calculateCartTotal() {
+
+    let total = 0
+    for (let i = 0; i < cart.length; i++) {
+        const item = cart[i];
+        total += item.price * item.quantity
+    }
+
+    return total
+}
+
 
