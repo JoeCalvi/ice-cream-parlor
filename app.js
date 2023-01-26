@@ -34,31 +34,31 @@ const containers = [{
 
 
 
-function drawStore(){
+function drawStore() {
 
 }
 
-function drawCart(){
+function drawCart() {
 
 }
 
-function addItemToCart(){
+function addItemToCart() {
 
 }
 
-function removeItemFromCart(){
+function removeItemFromCart() {
 
 }
 
-function adjustQuantity(){
+function adjustQuantity() {
 
 }
 
-function calculateCartTotal(){
+function calculateCartTotal() {
 
 }
 
-function checkout(){
-    
+function checkout() {
+
 }
 
