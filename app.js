@@ -32,6 +32,8 @@ const containers = [{
     price: 4
 }]
 
+let cart = []
+
 
 
 function drawStore() {
@@ -40,9 +42,62 @@ function drawStore() {
 
 function drawCart() {
 
+    let cartOrderElem = document.getElementById('cart-order')
+    let cartTotalElem = document.getElementById('cart-total')
+    let template = ''
+
+    cart.forEach(item => {
+        template += `
+        
+        `
+    })
+
+    let total = calculateCartTotal()
+
+    cartOrderElem.innerText = template
+    cartTotalElem.innerText = total.toFixed(2)
+
 }
 
-function addItemToCart() {
+function addContainerToCart(name) {
+
+    let chosenContainer = containers.find(container => container.name == name)
+    // console.log(chosenContainer)
+    cart.push({
+        container: chosenContainer.name,
+    })
+
+    console.log(cart)
+
+    drawCart()
+
+}
+
+function addFlavorToCart(name) {
+
+    let chosenFlavor = iceCream.find(flavor => flavor.name == name)
+    // console.log(chosenFlavor)
+    cart.push({
+        flavor: chosenFlavor.name
+    })
+
+    console.log(cart)
+
+    drawCart()
+
+}
+
+function addToppingToCart(name) {
+
+    let chosenTopping = toppings.find(topping => topping.name == name)
+    // // console.log(chosenTopping)
+    cart.push({
+        container: chosenTopping.name,
+    })
+
+    console.log(cart)
+
+    drawCart()
 
 }
 
@@ -56,6 +111,12 @@ function adjustQuantity() {
 
 function calculateCartTotal() {
 
+    let total = 0
+    cart.forEach(item => {
+        total += item.price * item.quantity
+    })
+
+    return total
 }
 
 function checkout() {

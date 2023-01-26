@@ -53,13 +53,13 @@
                             class="col-12 col-md-5 d-flex justify-content-center align-items-center scoops-borders py-5 m-4">
                             <div class="card">
                                 <img src="https://m.media-amazon.com/images/I/71VNjBMakfL._SL1500_.jpg" alt="cone"
-                                    title="Waffle Cone">
+                                    title="Waffle Cone" onclick="addContainerToCart('Waffle Cone')">
                             </div>
                         </div>
                         <div
                             class="col-12 col-md-5 d-flex justify-content-center align-items-center scoops-borders py-5 m-4">
                             <div class="card">
-                                <img src="http://images.wbmason.com/350/L_JOY66050.jpg" alt="bowl" title="Waffle Bowl">
+                                <img src="http://images.wbmason.com/350/L_JOY66050.jpg" alt="bowl" title="Waffle Bowl" onclick="addContainerToCart('Waffle Bowl')">
                             </div>
                         </div>
                         <div class="col-12 col-md-6 text-center left-side-offset py-2 d-none d-md-block">
@@ -83,21 +83,21 @@
                             class="col-12 col-md-3 d-flex justify-content-center align-items-center scoops-borders py-5 m-4">
                             <div class="card">
                                 <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ultimate-vanilla-ice-cream-1628511695.jpg"
-                                    alt="vanilla" title="Vanilla">
+                                    alt="vanilla" title="Vanilla" onclick="addFlavorToCart('Vanilla')">
                             </div>
                         </div>
                         <div
                             class="col-12 col-md-3 d-flex justify-content-center align-items-center scoops-borders py-5 m-4">
                             <div class="card">
                                 <img src="https://images.unsplash.com/photo-1584448275442-37f6357a499e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-                                    alt="strawberry" title="Strawberry">
+                                    alt="strawberry" title="Strawberry" onclick="addFlavorToCart('Strawberry')">
                             </div>
                         </div>
                         <div
                             class="col-12 col-md-3 d-flex justify-content-center align-items-center scoops-borders py-5 m-4">
                             <div class="card">
                                 <img src="https://images.unsplash.com/photo-1611945008429-3340e8c572f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                    alt="cookie dough" title="Cookie Dough">
+                                    alt="cookie dough" title="Cookie Dough" onclick="addFlavorToCart('Cookie Dough')">
                             </div>
                         </div>
                         <div class="col-12 col-md-4 text-center middle-left-offset d-none d-md-block">
@@ -123,14 +123,14 @@
                             class="col-12 col-md-5 d-flex justify-content-center align-items-center scoops-borders py-5 m-4">
                             <div class="card">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Sprinkles2.jpg"
-                                    alt="sprinkles" title="Sprinkles">
+                                    alt="sprinkles" title="Sprinkles" onclick="addToppingToCart('Sprinkles')">
                             </div>
                         </div>
                         <div
                             class="col-12 col-md-5 d-flex justify-content-center align-items-center scoops-borders py-5 m-4">
                             <div class="card">
                                 <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/chocolate-chips.jpg?quality=82&strip=1&resize=640%2C360"
-                                    alt="chocolate chips" title="Chocolate Chips">
+                                    alt="chocolate chips" title="Chocolate Chips" onclick="addToppingToCart('Chocolate Chips')">
                             </div>
                         </div>
                         <div class="col-12 col-md-6 text-center left-side-offset py-2 d-none d-md-block">
@@ -150,7 +150,7 @@
                         <h4>Order:</h4>
                     </span>
                     <span class="checkout-text">
-                        <p>Cone, 2 Scoops Strawberry, Sprinkles</p>
+                        <p id="cart-order">Cone, 2 Scoops Strawberry, Sprinkles</p>
                     </span>
                 </div>
                 <div class="col-12 col-md-6 d-flex justify-content-md-evenly align-items-center">
@@ -158,7 +158,7 @@
                         <h4>Total:</h4>
                     </span>
                     <span class="checkout-text p-3">
-                        <p>$12.95</p>
+                        <p id="cart-total">$12.95</p>
                     </span>
                 </div>
                 <div class="col-12 d-flex justify-content-center pb-5">
